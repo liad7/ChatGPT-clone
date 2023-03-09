@@ -3,7 +3,7 @@ type Props = {
 }
 export function Chat({ chatId }: Props) {
     return (
-        <section>chat
+        <section className="flex-1">
         </section>
     )
 }
