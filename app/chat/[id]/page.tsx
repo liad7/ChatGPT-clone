@@ -1,7 +1,7 @@
-export function ChatPage() {
-return(
-<section>
-chat
-</section>
-)
+export default function ChatPage() {
+    return (
+        <section>
+            chat
+        </section>
+    )
 }

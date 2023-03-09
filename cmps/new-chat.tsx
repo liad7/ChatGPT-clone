@@ -11,7 +11,7 @@ export function NewChat() {
 const {data:session} = useSession()
 
 const createNewChat = async()=>{
-const doc = await addDoc (collection(db,'users',session?.user?.email,'chats'),{
+const doc = await addDoc(collection(db,'users',session?.user?.email!,'chats'),{
     userId:session?.user?.email,
     createdAt: serverTimestamp()
 })
