@@ -41,7 +41,7 @@ export function ChatInput({ chatId }: Props) {
 
         const notification = toast.loading('ChatGPT is thinking...')
 
-        await fetch('api/askQuest', {
+        await fetch('/api/askQuest', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -49,10 +49,11 @@ export function ChatInput({ chatId }: Props) {
             body: JSON.stringify({
                 prompt: input, chatId, model, session
             })
-        })
-        toast.success('ChatGPT has responded', {
-            id: notification
-        })
+        }).then(() =>
+            toast.success('ChatGPT has responded', {
+                id: notification
+            })
+        )
     }
     return (
         <section className="bg-gray-700/50 text-gray-400 rounded-lg text-sm">
