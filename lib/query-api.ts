@@ -12,7 +12,6 @@ const query = async (prompt: string, chatId: string, model: string) => {
         presence_penalty: 0.0,
     })
         .then(res => res.data.choices[res.data.choices.length-1].text)
-        // .then(res => res.data.choices[0].text)
         .catch(err => `ChatGPT was enable to find an answer for that! (Error: ${err.message})`)
 }
 
