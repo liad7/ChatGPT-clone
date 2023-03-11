@@ -5,7 +5,7 @@ type Props = {
 }
 
 export function Message({ message }: Props) {
-const isChatGPT = message.user.name = 'ChatGPT'
+const isChatGPT = message.user.name === 'ChatGPT'
     return (
         <section className={`py-5 text-white ${isChatGPT && 'bg-[#434654]'}`}>
             <div className="flex space-x-5 px-10 max-w-2xl mx-auto">
